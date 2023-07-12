@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="#">
+    <form action="#" onsubmit="return validationForm()">
         <div class="form">
             <h1>Register</h1>
             <div class="username">
@@ -27,7 +27,7 @@
             <div class="contact">
                 <label for="contact">Contact No.</label>
                 <br>
-                <input type="number" title="contact" id="contact">
+                <input type="number" title="contact" id="contact" maxlength="10">
             </div>
 
             <div class="password">
@@ -43,7 +43,7 @@
             </div>
 
             <div class="button">
-                <button type="button">Submit</button>
+                <button type="submit">Submit</button>
                 <button type="reset">Reset</button>
             </div>
         </div>
@@ -57,9 +57,21 @@
             var firstPass = document.getElementById("password").value;
             var secondPass = document.getElementById("password2").value;
 
-            if (name === "" || email === "" || firstPass === "" || secondPass === "" || contact === "") {
+            if (name.trim() === "" || email.trim() === "" || secondPass.trim() === "") {
                 alert("Please enter valid data");
                 return false;
+            }
+            else if (contact.lenght > 10 || contact.lenght < 10 || contact.trim() === "") {
+                alert("Please enter valid contact number");
+                return false;
+            }
+            else if (firstPass.trim() === "" || firstPass.lenght < 7) {
+                alert("Please enter valid password");
+                return false;
+            }
+            else {
+                alert("Sucessfully Registered...")
+                return true;
             }
         }
     </script>
