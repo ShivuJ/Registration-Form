@@ -4,8 +4,11 @@ body {
     /* text-align: center; */
     overflow: hidden;
     font-size: 24px;
-    background-color: black;
+    /* background-color: black; */
     color: #fff;
+    background: url("./src/pexels-sebastiaan-stam-1480693.jpg") no-repeat fixed;
+    background-size: cover;
+    /* align-items: center; */
 }
 
 div {
@@ -34,15 +37,17 @@ input::-webkit-inner-spin-button {
 }
 
 .form {
-    margin: 10% 35%;
+    margin: 10% 5%;
     border: 2px solid black;
     box-shadow: 5px 5px 10px grey;
     width: 500px;
     height: 550px;
-    animation: borderAnimation 2s infinite;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    /* animation: borderAnimation 2s infinite; */
 }
 
-@keyframes borderAnimation {
+/* @keyframes borderAnimation {
     0% {
         border-color: red;
         box-shadow: 5px 5px 10px red;
@@ -57,7 +62,7 @@ input::-webkit-inner-spin-button {
         border-color: green;
         box-shadow: 5px 5px 10px green;
     }
-}
+} */
 
 button {
     width: 70px;
@@ -69,9 +74,22 @@ button:hover {
     background-color: black;
     color: white;
     box-shadow: 2px 2px 5px grey;
+    /* animation: borderAnimation 2s infinite; */
 }
 
 .button {
     margin: 10px 10px 10px 150px;
     padding: 20px;
+}
+
+#uname,
+#emailId,
+#contactNo,
+#pass,
+#pass2 {
+    visibility: hidden;
+    font-size: 14px;
+    color: red;
+    text-align: right;
+    padding: 10px;
 }
