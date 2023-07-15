@@ -93,3 +93,12 @@ button:hover {
     text-align: right;
     padding: 10px;
 }
+
+#credId {
+    border: 2px solid grey;
+}
+
+th,
+td {
+    border: 2px solid grey;
+}

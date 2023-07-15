@@ -38,7 +38,7 @@
                     <label for="username" id="contactNo">Please enter valid Contact number</label>
                 </span>
                 <br>
-                <input type="number" title="contact" id="contact" maxlength="10">
+                <input type="number" title="contact" id="contact" minlength="10" maxlength="10">
             </div>
 
             <div class="password">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="button">
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="credAdd()">Submit</button>
                 <button type="reset">Reset</button>
             </div>
         </div>
@@ -110,6 +110,24 @@
             }
         }
     </script>
+    <!-- <div class="credentialTable">
+        <table id="credId">
+            <thead>
+                <th>Name</th>
+                <th>Email Id</th>
+                <th>Contact Number</th>
+                <th>Password</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>Email Id</td>
+                    <td>Contact Number</td>
+                    <td>Password</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
 </body>
 
 </html>
