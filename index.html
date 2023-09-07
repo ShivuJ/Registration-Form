@@ -6,128 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="validation.js"></script>
 </head>
 
 <body>
-    <form action="#" onsubmit="return validationForm()">
-        <div class="form">
-            <h1>Register</h1>
-            <div class="username">
-                <span>
-                    <label for="username">Username</label>
-                    <label for="username" id="uname">Please enter valid name</label>
-                </span>
-                <br>
+    <section id="form">
+        <form action="#" onsubmit="return validationForm()">
+            <div class="form">
+                <h1>Register</h1>
+                <div class="username">
+                    <span>
+                        <label for="username">Username</label>
+                        <label for="username" id="uname">Please enter valid name</label>
+                    </span>
+                    <br>
 
-                <input type="text" title="username" id="name">
+                    <input type="text" title="username" id="name">
 
+                </div>
+
+                <div class="email">
+                    <span>
+                        <label for="email">E-mail Id</label>
+                        <label for="username" id="emailId">Please enter valid Email address</label>
+                    </span>
+                    <br>
+                    <input type="email" title="email" id="email">
+                </div>
+
+                <div class="contact">
+                    <span>
+                        <label for="contact">Contact No.</label>
+                        <label for="username" id="contactNo">Please enter valid Contact number</label>
+                    </span>
+                    <br>
+                    <input type="number" title="contact" id="contact" minlength="10" maxlength="10">
+                </div>
+
+                <div class="password">
+                    <span>
+                        <label for="password">Password</label>
+                        <label for="username" id="pass">Please enter valid Password</label>
+                    </span>
+                    <br>
+                    <input type="password" title="password" id="password">
+                </div>
+
+                <div class="confirmPassword">
+                    <span>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <label for="username" id="pass2">Password does not match</label>
+                    </span>
+                    <br>
+                    <input type="password" title="confirmPassword" id="password2">
+                </div>
+
+                <div class="button">
+                    <button type="submit" onclick="credAdd()">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
             </div>
-
-            <div class="email">
-                <span>
-                    <label for="email">E-mail Id</label>
-                    <label for="username" id="emailId">Please enter valid Email address</label>
-                </span>
-                <br>
-                <input type="email" title="email" id="email">
-            </div>
-
-            <div class="contact">
-                <span>
-                    <label for="contact">Contact No.</label>
-                    <label for="username" id="contactNo">Please enter valid Contact number</label>
-                </span>
-                <br>
-                <input type="number" title="contact" id="contact" minlength="10" maxlength="10">
-            </div>
-
-            <div class="password">
-                <span>
-                    <label for="password">Password</label>
-                    <label for="username" id="pass">Please enter valid Password</label>
-                </span>
-                <br>
-                <input type="password" title="password" id="password">
-            </div>
-
-            <div class="confirmPassword">
-                <span>
-                    <label for="confirmPassword">Confirm Password</label>
-                    <label for="username" id="pass2">Password does not match</label>
-                </span>
-                <br>
-                <input type="password" title="confirmPassword" id="password2">
-            </div>
-
-            <div class="button">
-                <button type="submit" onclick="credAdd()">Submit</button>
-                <button type="reset">Reset</button>
-            </div>
-        </div>
-    </form>
-
-    <script>
-        function validationForm() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var contact = document.getElementById("contact").value;
-            var firstPass = document.getElementById("password").value;
-            var secondPass = document.getElementById("password2").value;
-
-            if (name.trim() === "") {
-                // alert("Please enter valid name");
-                document.getElementById("uname").style.visibility = "visible";
-                return false;
-            }
-            else if (email.trim() === "") {
-                //alert("Please enter valid email");
-                document.getElementById("emailId").style.visibility = "visible";
-                return false;
-            }
-            else if (contact.length > 10 || contact.length < 10 || contact.trim() === "") {
-                //alert("Please enter valid contact number");
-                document.getElementById("contactNo").style.visibility = "visible";
-                return false;
-            }
-            else if (firstPass.trim() === "" || firstPass.length < 7) {
-                //alert("Please enter valid password");
-                document.getElementById("pass").style.visibility = "visible";
-                return false;
-            }
-            else if (firstPass !== secondPass || secondPass.trim() === "") {
-                //alert("Password does not match")
-                document.getElementById("pass2").style.visibility = "visible";
-                return false;
-            }
-            else {
-                alert("Sucessfully Registered...");
-                document.getElementById("uname").style.visibility = "hidden";
-                document.getElementById("emailId").style.visibility = "hidden";
-                document.getElementById("contactNo").style.visibility = "hidden";
-                document.getElementById("pass").style.visibility = "hidden";
-                document.getElementById("pass2").style.visibility = "hidden";
-                return true;
-            }
-        }
-    </script>
-    <!-- <div class="credentialTable">
-        <table id="credId">
-            <thead>
-                <th>Name</th>
-                <th>Email Id</th>
-                <th>Contact Number</th>
-                <th>Password</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Name</td>
-                    <td>Email Id</td>
-                    <td>Contact Number</td>
-                    <td>Password</td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
+        </form>
+    </section>
 </body>
 
 </html>
