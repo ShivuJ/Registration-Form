@@ -31,12 +31,12 @@
             $("#emailId").css('visibility', 'hidden');
             $("#pass").css('visibility', 'hidden');
             $("#pass2").css('visibility', 'hidden');
-            $("#contact").keyup(function(){
-                if(contact.length > 10 || contact.length < 10){
-                    $("#contactNo").css('visibility', 'hidden');
-                    $("#contactValidation").css('visibility', 'visible');
-                };
-            });
+            // $("#contact").keyup(function(){
+            //     if(contact.length > 10 || contact.length < 10){
+            //         $("#contactNo").css('visibility', 'hidden');
+            //         $("#contactNo").css('visibility', 'visible');
+            //     };
+            // });
             return false;
         }
         else if (firstpass.trim() === "" || firstpass.length < 7) {
