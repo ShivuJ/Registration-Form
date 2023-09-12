@@ -86,7 +86,8 @@ button:hover {
 #emailId,
 #contactNo,
 #pass,
-#pass2 {
+#pass2,
+#contactValidation {
     visibility: hidden;
     font-size: 14px;
     color: red;
